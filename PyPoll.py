@@ -2,9 +2,14 @@
 import csv
 import os
 # Assign a variable to load a file from a path.
-file_to_load = os.path.join("Resources", "election_results.csv")
+#file_to_load = os.path.join("Resources", "election_results.csv")
 # Assign a variable to save the file to a path.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+#file_to_save = os.path.join("analysis", "election_analysis.txt")
+
+file1 = input('file1: ')
+file2 = input('file2: ')
+
+#def election_test(file1, file2):
 # Initialize a total vote counter.
 total_votes = 0
 # Candidate options and candidate votes.
@@ -15,7 +20,8 @@ winning_candidate = ""
 winning_count = 0
 winning_percentage = 0
 # Open the election results and read the file.
-with open(file_to_load) as election_data:
+#with open(file_to_load) as election_data:
+with open(file1) as election_data:
     file_reader = csv.reader(election_data)
     # Read the header row.
     headers = next(file_reader)
@@ -36,7 +42,8 @@ with open(file_to_load) as election_data:
         candidate_votes[candidate_name] += 1
 
 # Save the results to our text file.
-with open(file_to_save, "w") as txt_file:
+# with open(file_to_save, "w") as txt_file:
+with open(file2, "w") as txt_file:
     # Print the final vote count to the terminal.
     election_results = (
         f"\nElection Results\n"
@@ -72,3 +79,5 @@ with open(file_to_save, "w") as txt_file:
     print(winning_candidate_summary)
     # Save the winning candidate's results to the text file.
     txt_file.write(winning_candidate_summary)
+
+#election_test("Resources/election_results.csv", "analysis/election_analysis.txt")

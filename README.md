@@ -44,4 +44,11 @@ The voter turnout for each county:
     
 - County with the highest turnout:
     - Denver had the highest voter turnout with 82.8% of votes which is equivalent to 306,055 voters.
-    
+
+## Election-Audit Summary
+
+- The following script PyPoll_Challenge.py can be modify to use for any election. We can do this in two ways with the input() function and def my_function(). At the beginning of the script
+for exampe we can have file_1 = input ('file_1: ') and file_2 = input ('file_2: ') and replace the syntax with open(file_1)as election_data and with open(file_2, "w") as txt_file, 
+where file_1 is the file_to_load and file_2 is file_save. The input function will generate an output in the terminal asking what is the location for file_to_load and file_to_save.
+The def my_function () can also be used generate other election data while using the same script. For example (def election_test(file_1, file_2):), change the (with) statements as we did with the input() function,
+can be used at the beginnging with the rest of the script below and at the end election_test("folder/election data", "folder/election data txt file"). 
